@@ -33,13 +33,33 @@
                                 <label for="AuthenticationIP" class="form-label">认证服务器地址</label>
                                 <input type="text" class="form-control" id="AuthenticationIP" name="AuthenticationIP" placeholder="/EDS/jsp/AuthenticationURL认证IP，默认使用：http://182.138.3.142:8082">
                             </div>
-                            <div class="mb-3">
-                                <label for="UserID" class="form-label">UserID</label>
+							<div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="UserID" class="form-label">UserID</label>
                                 <input type="text" class="form-control" id="UserID" name="UserID" placeholder="UserID抓包获取：xxxx@ITV" required>
+								    </div>
+								</div>
+								<div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="key" class="form-label">Key</label>
+                                <input type="text" class="form-control" id="key" name="key" placeholder="可选项">
+								    </div>
+                                </div>
                             </div>
-                            <div class="mb-3">
-                                <label for="mac" class="form-label">MAC地址</label>
+							<div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="ip" class="form-label">机顶盒IP地址</label>
+                                <input type="text" class="form-control" id="ip" name="ip" placeholder="机顶盒IP地址(随便填，如10.10.10.10)" required>
+								    </div>
+								</div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="mac" class="form-label">MAC地址</label>
                                 <input type="text" class="form-control" id="mac" name="mac" placeholder="机顶盒背面MAC" required>
+								    </div>
+								</div>
                             </div>
                             <div class="mb-3">
                                 <label for="STBID" class="form-label">STBID</label>
@@ -63,13 +83,61 @@
                                 <label for="Authenticator" class="form-label">Authenticator</label>
                                 <input type="text" class="form-control" id="Authenticator" name="Authenticator" placeholder="抓包获取" required>
                             </div>
+							<div class="row g-3">
+							    <div class="col-md-6">
+                                    <div class="mb-4">
+                                        <label for="RTP2HTTPD" class="form-label">RTP2HTTPD地址</label>
+                                <input type="text" class="form-control" id="RTP2HTTPD" name="RTP2HTTPD" placeholder="例如：http://192.168.6.1:5140" required>
+								    </div>
+								</div>
+								<div class="col-md-6">
+                                    <div class="mb-4">
+                                        <label for="logo_url" class="form-label">台标(logo)地址</label>
+                                <input type="text" class="form-control" id="logo_url" name="logo_url" placeholder="例如：http://192.168.6.9:5000" required>
+								    </div>
+                                </div>
+                            </div>
+							<!-- 新增 epg_server_url 配置 -->
+							<div class="row g-3">
+							    <div class="col-md-6">
+                                    <div class="mb-4">
+                                        <label for="epg_server_url" class="form-label">EPG地址</label>
+                                <input type="text" class="form-control" id="epg_server_url" name="epg_server_url" placeholder="例如：http://192.168.6.9:5000" required>
+								    </div>
+                                </div>
+							    <div class="col-md-6">
+							        <div class="mb-3">
+                                        <label for="epgname" class="form-label">EPG保存文件名（gzip压缩格式）</label>
+                                <input type="text" class="form-control" id="epgname" name="epgname" placeholder="例如：epg.xml.gz" required>
+								    </div>
+                                </div>
+                            </div>
+                            <div class="row g-3">
+							    <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="key" class="form-label">Key</label>
-                                <input type="text" class="form-control" id="key" name="key" placeholder="可选项">
+                                <label for="templateName" class="form-label">templateName</label>
+                                <input type="text" class="form-control" id="templateName" name="templateName" placeholder="抓包获取">
+								    </div>
+								</div>
+							    <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="areaId" class="form-label">areaId</label>
+                                <input type="text" class="form-control" id="areaId" name="areaId" placeholder="抓包获取">
+								    </div>
+								</div>
                             </div>
                             <div class="mb-4">
-                                <label for="UDPxy" class="form-label">UDPxy地址</label>
-                                <input type="text" class="form-control" id="UDPxy" name="UDPxy" placeholder="例如：http://192.168.5.1:8888" required>
+                                <label for="UserAgent" class="form-label">UserAgent</label>
+                                <input type="text" class="form-control" id="UserAgent" name="UserAgent" placeholder="抓包获取，如Mozilla/5.0 (X11; Android x86_64; ChromiumBrowser) AppleWebKit/534.24 (KHTML, like Gecko) Safari/534.24 SkWebKit-SC-CTC">
+                            </div>
+							<!-- 新增 Git 配置 -->
+                            <div class="mb-3">
+                                <label for="epg_git_repo" class="form-label">EPG Git 仓库地址</label>
+                                <input type="text" class="form-control" id="epg_git_repo" name="epg_git_repo" placeholder="例如：https://github.com/username/repo.git">
+                            </div>
+                            <div class="mb-3">
+                                <label for="epg_git_private_token" class="form-label">EPG Git Token</label>
+                                <input type="password" class="form-control" id="epg_git_private_token" name="epg_git_private_token" placeholder="Git Personal Access Token(<用户名>:<PAT>)">
                             </div>
                             <button type="submit" class="btn btn-primary w-100">保存配置并运行</button>
                         </form>
