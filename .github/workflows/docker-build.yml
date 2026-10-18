@@ -1,4 +1,3 @@
-# .github/workflows/docker-build.yml
 name: Build and Push Docker Image
 
 on:
