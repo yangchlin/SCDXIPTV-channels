@@ -1,1 +1,12 @@
-
+services:
+  scdxitv:
+    build: .
+    container_name: scdxiptv
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      - /volume2/docker/dxiptv/output:/app/output
+      - /volume2/docker/dxiptv/config:/app/config
+      - /volume2/docker/dxiptv/log:/app/log
+      - /volume2/docker/dxiptv/logo:/app/logo
