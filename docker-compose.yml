@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - /volume2/docker/dxiptv/output:/app/output
-      - /volume2/docker/dxiptv/config:/app/config
-      - /volume2/docker/dxiptv/log:/app/log
-      - /volume2/docker/dxiptv/logo:/app/logo
+      - /volume2/docker/scdxitv/output:/app/output
+      - /volume2/docker/scdxitv/config:/app/config
+      - /volume2/docker/scdxitv/log:/app/log
+      - /volume2/docker/scdxitv/logo:/app/logo
