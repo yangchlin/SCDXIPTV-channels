@@ -22,6 +22,7 @@ ENV LC_ALL C.UTF-8
 ENV PYTHONUNBUFFERED=0
 ENV FLASK_APP=app.py
 
+# 安装python3依赖
 RUN pip install --no-cache-dir -r requirements.txt
 
 # DES3 补丁
