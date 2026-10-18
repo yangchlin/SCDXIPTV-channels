@@ -6,4 +6,4 @@ service cron start
 
 
 # 启动Flask应用
-flask run --host 0.0.0.0
+flask run --host 0.0.0.0 --port 3000
